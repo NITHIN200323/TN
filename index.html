@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposal</title>
+<style>
+    #picture {
+        display: none;
+        max-width: 500px;
+        margin: 20px auto;
+    }
+</style>
+</head>
+<body>
+
+<div style="text-align: center; margin-top: 100px;">
+    <h1>If kisses were water I would give you the ocean, if hugs were the leaves I would give you the forest, And if love was time, I would give you eternity</h1>
+    <h2>Let's spend the rest of our lives together.</h2>
+    <h2>Will you marry me?</h2>
+    <h3>- NIKHIL</h3>
+    <form id="proposalForm" action="mailto:heremail@example.com" method="post" enctype="text/plain">
+        <input type="submit" value="Yes, I will marry you" id="yesBtn">
+    </form>
+    <button id="showPictureBtn"></button>
+    <img id="picture" src="TN.jpg" alt="Picture of us">
+</div>
+
+<script>
+    document.getElementById("proposalForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+        var picture = document.getElementById("picture");
+        picture.style.display = "block";
+    });
+
+    document.getElementById("showPictureBtn").addEventListener("click", function() {
+        var picture = document.getElementById("picture");
+        if (picture.style.display === "none") {
+            picture.style.display = "block";
+        } else {
+            picture.style.display = "none";
+        }
+    });
+</script>
+
+</body>
+</html>
